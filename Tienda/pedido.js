@@ -31,7 +31,7 @@ function generarLineasProductos(productos) {
 
     productos.forEach(function(producto) {
         const subtotal = producto.precio * producto.cantidad;
-        lineas = lineas + "  - " + producto.nombre + ": €" + producto.precio.toFixed(2) + " x " + producto.cantidad + " uds = €" + subtotal.toFixed(2) + "\n    ";
+        lineas = lineas + "  - " + producto.nombre + ": " + producto.precio.toFixed(2) + "€ x " + producto.cantidad + " uds = " + subtotal.toFixed(2) + "€\n    ";
     });
 
     return lineas;
@@ -105,11 +105,11 @@ function entregarPedido() {
     ${"=".repeat(55)}
     RESUMEN ECONÓMICO
     ${"-".repeat(55)}
-    Base imponible  : €${baseImponible.toFixed(2)}
-    Descuento (${(descuentoAplicado * 100).toFixed(0)}%) : -€${importeDescuento.toFixed(2)}
-    IVA (21%)       :  €${importeIVA.toFixed(2)}
+    Base imponible  : ${baseImponible.toFixed(2)}€
+    Descuento (${(descuentoAplicado * 100).toFixed(0)}%) : -${importeDescuento.toFixed(2)}€
+    IVA (21%)       :  ${importeIVA.toFixed(2)}€
     ${"-".repeat(55)}
-    TOTAL A PAGAR   :  €${totalFinal.toFixed(2)}
+    TOTAL A PAGAR   :  ${totalFinal.toFixed(2)}€
     ${"=".repeat(55)}
     Gracias por tu compra, ${clienteNormalizado}. ¡Cuidamos el planeta juntos! 🌍
     Tu pedido llegará el ${fechaEntrega}.

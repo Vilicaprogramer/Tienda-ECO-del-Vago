@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🌿 Tienda ECO - Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Tienda Ecológica</h1>
+        
+        <section class="form-pedido">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="text" id="direccion" placeholder="Dirección de envío" required>
+            
+            <div class="selector-producto">
+                <select id="select-productos">
+                    <option value="">Cargando productos...</option>
+                </select>
+                <input type="number" id="cantidad" value="1" min="1">
+                <button id="btn-agregar">Añadir al Carrito</button>
+            </div>
+
+            <div id="carrito-preview">
+                <h3>Tu Carrito:</h3>
+                <ul id="lista-carrito"></ul>
+            </div>
+
+            <button id="btn-finalizar" class="btn-main">FINALIZAR Y GENERAR FACTURA</button>
+        </section>
+
+        <section id="seccion-factura" class="hidden">
+            <pre id="factura-output"></pre>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
